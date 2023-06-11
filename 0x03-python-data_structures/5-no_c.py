@@ -4,7 +4,7 @@
 def no_c(my_string):
     str_list = list(my_string)
     for i in range(len(str_list)):
-        if str_list[i] == 'c':
+        if str_list[i] == 'c' or str_list[i] == 'C':
             str_list[i] = ''
     modified_str = ''.join(str_list)
     return modified_str
