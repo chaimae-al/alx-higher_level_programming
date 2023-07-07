@@ -81,3 +81,4 @@ Non-string datatypes for both first_name and last_name:
     Traceback (most recent call last):
               ...
     TypeError: first_name must be a string
+python3 -m doctest -v ./tests/3-say_my_name.txt | tail -2
