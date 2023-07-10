@@ -1,14 +1,16 @@
 #!/usr/bin/python3
-"""This program create a new int called MyInt and is rebel!!!"""
+"""
+This program will try to add attributes to classes if it possible
+"""
 
 
-class MyInt(int):
-    """Class MyInt is like an int but Rebel"""
+def add_attribute(obj, key, value):
+    """
+    This function will try to add a new attribute
+    to a class if it possible, throws an Exception if can't
+    """
 
-    def __eq__(self, other_num):
-        """Rebel!!! equal is not equal"""
-        return super().__ne__(other_num)
+    if not hasattr(obj, '__dict__'):
+        raise TypeError("can't add new attribute")
 
-    def __ne__(self, other_num):
-        """Rebel!!! not equal is equal"""
-        return super().__eq__(other_num)
+    setattr(obj, key, value)
