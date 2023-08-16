@@ -1,27 +1,5 @@
--- Lists all privileges of the MySQL users user_0d_1 and user_0d_2
-SELECT
-    Host,
-    User,
-    Select_priv,
-    Insert_priv,
-    Update_priv,
-    Delete_priv,
-    Create_priv,
-    Drop_priv,
-    Grant_priv,
-    References_priv,
-    Index_priv,
-    Alter_priv,
-    Create_tmp_table_priv,
-    Lock_tables_priv,
-    Create_view_priv,
-    Show_view_priv,
-    Create_routine_priv,
-    Alter_routine_priv,
-    Execute_priv,
-    Event_priv,
-    Trigger_priv
-FROM
-    mysql.user
-WHERE
-    User = 'user_0d_1' OR User = 'user_0d_2';
+-- lists all privileges of the MySQL users user_0d_1 and user_0d_2 on your server.
+
+SHOW GRANTS FOR user_0d_1@localhost;
+SHOW GRANTS FOR user_0d_2@localhost;
+
